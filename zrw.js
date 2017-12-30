@@ -194,6 +194,9 @@ setup = function() {
   //createCanvas(displayWidth/2, displayHeight/2);
   
   var cnv = createCanvas(displayWidth, displayHeight);
+  var x = (displayWidth - width) / 2;
+  var y = (displayHeight - height) / 2;
+  cnv.position(x, y);
   
   for (i = 0; i < 300; i++) {
     dotArray.push(createRandomDot());
@@ -204,7 +207,7 @@ setup = function() {
 draw = function() {
   var eachDot, i, len;
   blendMode(BLEND);
-  background(0, 0, 40);
+  background(0, 0, 0);
   blendMode(ADD);
   for (i = 0, len = dotArray.length; i < len; i++) {
     eachDot = dotArray[i];
